@@ -90,7 +90,7 @@ body{
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to right, #fff, #fff,  #ffffff8d,  #ffffff00 ),
-                url(/Images/national-cancer-institute-j55TmqkzQ4k-unsplash.jpg);
+                url(../Images/national-cancer-institute-j55TmqkzQ4k-unsplash.jpg);
     background-position: center ;
     background-repeat: no-repeat;
     background-size: cover;
