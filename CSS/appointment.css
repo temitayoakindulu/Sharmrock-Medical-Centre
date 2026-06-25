@@ -1,0 +1,62 @@
+/* .appointment{
+    display: flex;
+    width: 100% auto;
+    min-height: 100vh;
+    background-color: red;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+} */
+
+.appointment-section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    padding:50px 0;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 94, 42, 0.75);
+    z-index: -1;
+}
+
+.appointment-form {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid rgba(255,255,255,.2);
+}
+
+.appointment-form .form-control,
+.appointment-form .form-select {
+    height: 55px;
+    border: none;
+}
+
+.appointment-form .btn-success {
+    background: #00c853;
+    border: none;
+}
+
+textarea{
+    width: 100%;
+    border: none;
+    outline:invert;
+    padding: 10px;
+    border-radius: 5px;
+}

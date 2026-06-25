@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: "poppins", sans-serif;
+    min-height: 100vh;
+    padding-top: 70px;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+.clear{
+  clear: both;
+}
+
+
+             /* COLORS */
+
+:root {
+  --primary: #1B5E20;     /* main green */
+  --secondary: #4CAF50 ;   /* teal accent */
+  --light-bg: #F5F5F5;
+  --text-dark: #263238;
+  --white: #fff;
+}
+
+            /* Text Typography */
+
+.hero-title {
+  font-size: 40px; /* default (mobile first = big) */
+  color: #1B5E20;
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 300px) {
+  .hero-title {
+    font-size: 24px; /* smaller */
+  }
+}
+
+@media (min-width: 450px) {
+  .hero-title {
+    font-size: 30px; /* smaller */
+  }
+}
+
+
+@media (min-width: 630px) {
+  .hero-title {
+    font-size: 35px; /* smaller */
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 30px; /* smaller */
+  }
+}
+/* Large screens */
+@media (min-width: 990px) {
+  .hero-title {
+    font-size: 40px; /* big again */
+  }
+}
+
+.nowrap{
+    text-wrap: nowrap;
+}
+            /* Buttons */
+
+.btn-primary{
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+}
+
+         /* Hero Section */
+.hero{
+    width: 100%;
+    min-height: 90vh;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #fff, #fff,  #ffffff8d,  #ffffff00 ),
+                url(/Images/national-cancer-institute-j55TmqkzQ4k-unsplash.jpg);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 50px 0;
+}
+
+.carousel-indicators button {
+  background-color: #1B5E20; /* your green */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* MAIN BODY */
+/* .flex-image{
+  width: 100%;
+  height:700px;
+  position: relative;
+  background-image: url(/Images/national-cancer-institute-j55TmqkzQ4k-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+} */
+
+    /* SERVICES */
+
+    .service-card{
+      border-radius: 15px 15px 0 0;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(1, 67, 1, 0.9);
+    }
+
+
+
+
+
+
+            /* Navbar */
+.navbar{
+    border-bottom: 1px solid var(--text-dark);
+    border-radius:0 0 10px 10px;
+    background-color: #e3f3e4;
+}
+.navbar-light .navbar-brand {
+  color: var(--primary) !important;
+}
+
+.navbar-light .nav-link {
+  color: #263238 !important;
+}
+
+.navbar-light .nav-link:hover {
+  color: var(--primary) !important;
+}
+
+.navbar-brand {
+  font-size: clamp(18px, 4vw, 20px);
+}
+
+
+
+        /* ACCORDION FAQs */
+
+
+.accordion-button {
+    background-color: #fff;
+    color: #263238;
+    font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-item {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Green Arrow */
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%232E7D32'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* FOOTER */  
+
+.footer{
+  background-color: #2E7D32;
+}
+
+
+
+.footer ul{
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+
+.footer-col h4{
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #fff;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-decoration: none;
+  color: #263238;
+  font-weight: 300;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.footer-col ul li a:hover{
+  color: #fff;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.social-links a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  margin: 0 10px 10px 0;
+  background-color: #1B5E20;
+  text-align: center;
+  line-height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.social-links a:hover{
+  background-color: #fff;
+  color: #1B5E20;
+  border: 2px solid #1B5E20;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+}
+
+
+
+
+@media (max-width: 768px){
+    .hero{
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+}
