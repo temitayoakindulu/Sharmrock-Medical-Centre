@@ -106,11 +106,7 @@ body{
 
 
 
-    .service-card{
-      border-radius: 15px 15px 0 0;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(1, 67, 1, 0.9);
-    }
+    
 
 
 
@@ -138,6 +134,32 @@ body{
 .navbar-brand {
   font-size: clamp(18px, 4vw, 20px);
 }
+
+       /* MISSION / VISION */
+.flex-image img{
+  border-radius: 15px 15px 0 0;
+}
+.mission p,
+.vision p{
+  font-size: 30px;
+}
+
+        /* SERVICES */
+
+.card{
+    border:none;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(1, 67, 1, 0.9);
+    transition:.4s;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+
 
 
 
