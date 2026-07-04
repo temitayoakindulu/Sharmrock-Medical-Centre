@@ -25,30 +25,214 @@
     z-index: -1;
 }
 
-.appointment-form {
+/* .appointment-form {
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(12px);
     padding: 35px;
     border-radius: 20px;
     color: white;
     border: 1px solid rgba(255,255,255,.2);
-}
+} */
 
-.appointment-form .form-control,
-.appointment-form .form-select {
-    height: 55px;
-    border: none;
-}
+        /* ========== FORM STYLES ========== */
+        
+        .appointment-card {
+            background: #ffffff;
+            border-radius: 16px;
+            border: none;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
 
-.appointment-form .btn-success {
-    background: #00c853;
-    border: none;
-}
+        .form-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
 
-textarea{
-    width: 100%;
-    border: none;
-    outline:invert;
-    padding: 10px;
-    border-radius: 5px;
-}
+        /* Input Group Styling */
+        .input-group-custom {
+            position: relative;
+            margin-bottom: 1.25rem;
+        }
+
+        .input-group-custom .input-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #2e7d32;
+            font-size: 1.25rem;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .input-group-custom .form-control,
+        .input-group-custom .form-select {
+            padding-left: 3.5rem;
+            padding-top: 1.5rem;
+            padding-bottom: 0.5rem;
+            padding-right: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px !important;
+            height: 58px;
+            font-size: 0.95rem;
+            color: #333;
+            background-color: #fff;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .input-group-custom .form-control:focus,
+        .input-group-custom .form-select:focus {
+            border-color: #2e7d32;
+            box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.15);
+        }
+
+        /* Floating Label */
+        .input-group-custom .floating-label {
+            position: absolute;
+            left: 3.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 0.95rem;
+            pointer-events: none;
+            transition: all 0.2s ease;
+            background: transparent;
+            padding: 0 4px;
+        }
+
+        .input-group-custom .form-control:focus ~ .floating-label,
+        .input-group-custom .form-control:not(:placeholder-shown) ~ .floating-label,
+        .input-group-custom .form-select:focus ~ .floating-label,
+        .input-group-custom .form-select:valid ~ .floating-label {
+            top: 12px;
+            transform: translateY(0);
+            font-size: 0.75rem;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+
+        /* Placeholder styling for inputs */
+        .input-group-custom .form-control::placeholder {
+            color: transparent;
+        }
+
+        /* Select dropdown styling */
+        .input-group-custom .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23666' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 16px 12px;
+        }
+
+        /* Time input icon override */
+        .input-group-custom .time-icon {
+            right: 16px;
+            left: auto;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Date input icon override */
+        .input-group-custom .date-icon-right {
+            right: 16px;
+            left: auto;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        /* Textarea styling */
+        .input-group-custom textarea.form-control {
+            height: 120px;
+            padding-top: 1.5rem;
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .input-group-custom textarea ~ .floating-label {
+            top: 24px;
+            transform: translateY(-50%);
+        }
+
+        .input-group-custom textarea:focus ~ .floating-label,
+        .input-group-custom textarea:not(:placeholder-shown) ~ .floating-label {
+            top: 12px;
+            transform: translateY(0);
+        }
+
+        /* Submit Button */
+        .btn-book {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 14px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+        }
+
+        .btn-book:hover {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(46, 125, 50, 0.4);
+        }
+
+        .btn-book:active {
+            transform: translateY(0);
+        }
+
+        /* Security Note */
+        .security-note {
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .security-note i {
+            color: #888;
+        }
+
+        /* Remove default browser date/time picker icons where needed */
+        input[type="date"]::-webkit-calendar-picker-indicator,
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        /* Age input - hide number spinner */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+            .appointment-card {
+                padding: 1.5rem;
+            }
+            
+            .form-title {
+                font-size: 1.5rem;
+            }
+        }
