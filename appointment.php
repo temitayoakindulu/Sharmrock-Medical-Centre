@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -57,24 +61,24 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item me-3">
-                <a href="index.html" class="nav-link" id="home">Home</a>
+                <a href="index.php" class="nav-link" id="home">Home</a>
               </li>
 
               <li class="nav-item me-3">
-                <a href="about.html" class="nav-link" id="about">About</a>
+                <a href="about.php" class="nav-link" id="about">About</a>
               </li>
 
               <li class="nav-item me-3">
-                <a href="service.html" class="nav-link" id="services"
+                <a href="service.php" class="nav-link" id="services"
                   >Services</a
                 >
               </li>
               <li class="nav-item me-3">
-                <a href="contact.html" class="nav-link" id="contact">Contact</a>
+                <a href="contact.php" class="nav-link" id="contact">Contact</a>
               </li>
 
               <li class="nav-item me-3">
-                <a href="blog.html" class="nav-link" id="contact">Blog Post</a>
+                <a href="blog.php" class="nav-link" id="contact">Blog Post</a>
               </li>
 
               <!-- <li class="nav-item">
@@ -87,7 +91,7 @@
               <a href="#" class="btn btn-sm btn-success d-sm-none d-lg-inline"
                 >Book Appointment</a
               >
-              <a href="Map.html" class="btn btn-sm btn-outline-success"
+              <a href="map.php" class="btn btn-sm btn-outline-success"
                 ><i class="bi bi-geo-alt-fill text-success"></i> Visit Us</a
               >
             </div>
@@ -99,7 +103,14 @@
     <main>
       <section class="appointment-section">
         <!-- Background Video -->
-        <video autoplay muted loop playsinline class="bg-video">
+        <video 
+        autoplay 
+        preload="auto" 
+        muted 
+        loop 
+        playsinline 
+        poster="Images/consultation.jpeg"
+        class="bg-video">
           <source src="Images/hospital-video.mp4" type="video/mp4"/>
         </video>
 
@@ -172,40 +183,83 @@
             
             <!-- Form Card -->
                 <div class="appointment-card">
-                    <form id="appointmentForm">
+                  <?php
+                    if (isset($_GET['success'])) {
+                    ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Success!</strong> Your appointment has been booked successfully. We will contact you shortly.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    <?php
+                    }
+                  ?>
+
+                  <?php if (isset($_SESSION["error"])) : ?>
+
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+    <?php
+        echo $_SESSION["error"];
+        unset($_SESSION["error"]);
+    ?>
+
+    <button type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"></button>
+</div>
+
+<?php endif; ?>
+
+
+<?php if (isset($_SESSION["success"])) : ?>
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <i class="bi bi-check-circle-fill me-2"></i>
+    <?php
+        echo $_SESSION["success"];
+        unset($_SESSION["success"]);
+    ?>
+
+    <button type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"></button>
+</div>
+
+<?php endif; ?>
+                    <form action="process/book_appointment.php" method="POST" id="appointmentForm">
                         
                         <!-- Full Name -->
                         <div class="input-group-custom">
                             <i class="bi bi-person input-icon"></i>
-                            <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+                            <input type="text" class="form-control" name="full_name" id="fullName" placeholder="Full Name" required>
                             <label class="floating-label" for="fullName">Full Name</label>
                         </div>
 
                         <!-- Email Address -->
                         <div class="input-group-custom">
                             <i class="bi bi-envelope input-icon"></i>
-                            <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" required>
                             <label class="floating-label" for="email">Email Address</label>
                         </div>
 
                         <!-- Phone Number -->
                         <div class="input-group-custom">
                             <i class="bi bi-telephone input-icon"></i>
-                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number" required>
                             <label class="floating-label" for="phone">Phone Number</label>
                         </div>
 
                         <!-- Age -->
                         <div class="input-group-custom">
                             <i class="bi bi-calendar input-icon"></i>
-                            <input type="number" class="form-control" id="age" placeholder="Age" min="0" max="120" required>
+                            <input type="number" class="form-control" name="age" id="age" placeholder="Age" min="0" max="120" required>
                             <label class="floating-label" for="age">Age</label>
                         </div>
 
                         <!-- Gender -->
                         <div class="input-group-custom">
                             <i class="bi bi-gender-ambiguous input-icon"></i>
-                            <select class="form-select" id="gender" required>
+                            <select class="form-select" name="gender" id="gender" required>
                                 <option value="" disabled selected></option>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
@@ -218,7 +272,7 @@
                         <!-- Appointment Date -->
                         <div class="input-group-custom">
                             <i class="bi bi-calendar input-icon"></i>
-                            <input type="date" class="form-control" id="appointmentDate" placeholder="mm/dd/yyyy" required>
+                            <input type="date" class="form-control" name="appointment_date" id="appointmentDate" placeholder="mm/dd/yyyy" required>
                             <label class="floating-label" for="appointmentDate">Appointment Date</label>
                             <i class="bi bi-calendar date-icon-right input-icon"></i>
                         </div>
@@ -226,7 +280,7 @@
                         <!-- Preferred Time -->
                         <div class="input-group-custom">
                             <i class="bi bi-clock input-icon"></i>
-                            <input type="time" class="form-control" id="preferredTime" placeholder="--:-- --" required>
+                            <input type="time" class="form-control" name="appointment_time" id="preferredTime" placeholder="--:-- --" required>
                             <label class="floating-label" for="preferredTime">Preferred Time</label>
                             <i class="bi bi-clock time-icon input-icon"></i>
                         </div>
@@ -234,7 +288,7 @@
                         <!-- Department -->
                         <div class="input-group-custom">
                             <i class="bi bi-building input-icon"></i>
-                            <select class="form-select" id="department" required>
+                            <select class="form-select" name="department" id="department" required>
                                 <option value="" disabled selected></option>
                                 <option value="cardiology">Cardiology</option>
                                 <option value="dermatology">Dermatology</option>
@@ -249,7 +303,7 @@
                         <!-- Preferred Doctor (Optional) -->
                         <div class="input-group-custom">
                             <i class="bi bi-person input-icon"></i>
-                            <select class="form-select" id="preferredDoctor">
+                            <select class="form-select" name="doctor" id="preferredDoctor">
                                 <option value="" disabled selected></option>
                                 <option value="dr-smith">Dr. Smith</option>
                                 <option value="dr-johnson">Dr. Johnson</option>
@@ -263,7 +317,7 @@
                         <!-- Symptoms / Reason -->
                         <div class="input-group-custom">
                             <i class="bi bi-chat-left-text input-icon"></i>
-                            <textarea class="form-control" id="symptoms" placeholder="Briefly describe your symptoms or reason for your visit" required></textarea>
+                            <textarea class="form-control" name="message" id="symptoms" placeholder="Briefly describe your symptoms or reason for your visit" required></textarea>
                             <label class="floating-label" for="symptoms">Briefly describe your symptoms or reason for your visit</label>
                         </div>
 
@@ -314,54 +368,149 @@
       </div>
     </section>
 
-    <footer class="footer mt-3">
-      <div
-        class="container-lg py-5 d-flex justify-content-center align-items-center"
-      >
-        <div class="row" style="width: 100%">
-          <div class="footer-col col-md-3 col-sm-6">
-            <h4>Sharmrock</h4>
-            <ul>
-              <li><a href="about.html">About US</a></li>
-              <li><a href="service.html">Our Services</a></li>
-              <li><a href="about.html">Our Mission</a></li>
-              <li><a href="#">Blog Post</a></li>
-            </ul>
-          </div>
+    <footer class="footer">
 
-          <div class="footer-col col-md-3 col-sm-6">
-            <h4>Get Help</h4>
-            <ul>
-              <li><a href="#FAQs">FAQs</a></li>
-              <li><a href="appointment.html">Book Appointment</a></li>
-              <li><a href="Map.html">Visit US</a></li>
-              <li><a href="contact.html">Contact US</a></li>
-            </ul>
-          </div>
+<div class="container">
 
-          <div class="footer-col col-md-3 col-sm-6">
-            <h4>Common Services</h4>
-            <ul>
-              <li><a href="service.html">General Consultations</a></li>
-              <li><a href="service.html">Laboratory Services</a></li>
-              <li><a href="service.html">Pharmacy Services</a></li>
-              <li><a href="service.html">Emergency Care</a></li>
-              <li><a href="service.html">Maternity Care</a></li>
-            </ul>
-          </div>
+<div class="row gy-5">
 
-          <div class="footer-col col-md-3 col-sm-6">
-            <h4>Follow US</h4>
+<!-- Logo -->
+
+<div class="col-lg-4 col-md-6">
+
+<h2>
+
+<i class="bi bi-hospital-fill footer-logo"></i>
+
+Shamrock Medical Centre
+
+</h2>
+
+<p>
+
+Providing quality healthcare through compassionate professionals,
+modern equipment and patient-centered services.
+
+</p>
+
+</div>
+
+<!-- Links -->
+
+<div class="col-lg-2 col-md-6">
+
+<h4>Quick Links</h4>
+
+<ul>
+
+<li><a href="index.php">Home</a></li>
+
+<li><a href="about.php">About</a></li>
+
+<li><a href="service.php">Services</a></li>
+
+<li><a href="appointment.php">Appointment</a></li>
+
+<li><a href="contact.php">Contact</a></li>
+
+</ul>
+
+</div>
+
+<!-- Services -->
+
+<div class="col-lg-3 col-md-6">
+
+<h4>Our Services</h4>
+
+<ul>
+
+<li><a href="#">General Consultation</a></li>
+
+<li><a href="#">Laboratory Services</a></li>
+
+<li><a href="#">Pharmacy</a></li>
+
+<li><a href="#">Emergency Care</a></li>
+
+<li><a href="#">Maternity Care</a></li>
+
+</ul>
+
+</div>
+
+<!-- Contact -->
+
+<div class="col-lg-3 col-md-6 footer-contact">
+
+<h4>Contact Us</h4>
+
+<p>
+
+<i class="bi bi-telephone-fill"></i>
+
++234 903 189 1178
+
+</p>
+
+<p>
+
+<i class="bi bi-envelope-fill"></i>
+
+info@shamrockmedical.com
+
+</p>
+
+<p>
+
+<i class="bi bi-geo-alt-fill"></i>
+
+Olorunda Road, Elepe, Ibadan
+
+</p>
+
             <div class="social-links">
-              <a href="https://web.facebook.com/laura.crespo.980967" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a
+                href="https://web.facebook.com/laura.crespo.980967"
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div class="container">
+
+<p>
+
+© <?php echo date("Y"); ?>
+
+Shamrock Medical Centre. All Rights Reserved.
+
+</p>
+
+<p>
+
+Designed & Developed by
+
+<span>Temitayo Akindulu</span>
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
     
     <!-- BOOTSTRAP JAVASCRIPT BUNDLE -->
 

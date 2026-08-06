@@ -14,6 +14,6 @@ if ($conn->connect_error) {
 }
 
 // Uncomment this line if you want to test the connection
-// echo "Database Connected Successfully!";
+ /* echo "Database Connected Successfully!"; */
 
 ?>

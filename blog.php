@@ -22,7 +22,8 @@
     />
 
     <link rel="stylesheet" href="./CSS/index.css" />
-    <title>Map</title>
+    <link rel="stylesheet" href="./CSS/blog.css" />
+    <title>Blog Posts</title>
   </head>
   <body>
     <header>
@@ -85,7 +86,7 @@
               <a href="appointment.php" class="btn btn-sm btn-success d-sm-none d-lg-inline"
                 >Book Appointment</a
               >
-              <a href="#" class="btn btn-sm btn-outline-success"
+              <a href="map.php" class="btn btn-sm btn-outline-success"
                 ><i class="bi bi-geo-alt-fill text-success"></i> Visit Us</a
               >
             </div>
@@ -95,18 +96,188 @@
     </header>
 
     <main>
-      <div>
-        <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1977.7790838674914!2d3.9564057!3d7.5139271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1039ef5d4863081b%3A0xa6feec2301d39440!2sElepe%20central%20mosque!5e0!3m2!1sen!2sng!4v1782206885989!5m2!1sen!2sng"
-              width="100%"
-              height="800px"
-              
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-      </div>
-    </main>
+
+    <!-- Hero -->
+    <section class="blog-hero">
+        <div class="container text-center">
+            <h1>Health Tips & Medical News</h1>
+            <p>
+                Stay informed with trusted healthcare advice,
+                wellness tips and the latest medical updates from
+                Shamrock Medical Centre.
+            </p>
+
+          <div class="blog-search mt-4 position-relative">
+                <i class="bi bi-search search-icon"></i>
+
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search health articles..."
+                >
+           </div>
+
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+
+    <section class="featured-post py-5">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <img src="Images/blog1.jpg"
+                        class="img-fluid rounded shadow">
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <span class="badge bg-success mb-3">
+                        Featured Article
+                    </span>
+
+                    <h2>
+                        10 Healthy Habits Everyone Should Practice Daily
+                    </h2>
+
+                    <p class="text-muted">
+
+                        Maintaining good health doesn't require expensive
+                        treatments. Small daily habits like proper nutrition,
+                        exercise, hydration and adequate sleep can greatly
+                        improve your quality of life.
+
+                    </p>
+
+                    <a href="#" class="btn btn-success">
+                        Read More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Blog Cards -->
+
+    <section class="blog-section pb-5">
+
+        <div class="container">
+
+            <div class="section-title text-center mb-5">
+
+                <h2>Latest Articles</h2>
+
+                <p>Helpful medical information from our professionals.</p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <div class="blog-card">
+
+                        <img src="Images/blog2.jpg" class="img-fluid">
+
+                        <div class="blog-content">
+
+                            <small>July 2026</small>
+
+                            <h4>Why Regular Medical Checkups Matter</h4>
+
+                            <p>
+
+                                Early diagnosis helps prevent serious illnesses
+                                and promotes a healthier lifestyle.
+
+                            </p>
+
+                            <a href="#">
+                                Read More →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="blog-card">
+
+                        <img src="Images/blog3.jpg" class="img-fluid">
+
+                        <div class="blog-content">
+
+                            <small>July 2026</small>
+
+                            <h4>Simple Ways to Boost Your Immune System</h4>
+
+                            <p>
+
+                                Learn practical lifestyle habits that strengthen
+                                your body's natural defence.
+
+                            </p>
+
+                            <a href="#">
+                                Read More →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="blog-card">
+
+                        <img src="Images/blog4.jpg" class="img-fluid">
+
+                        <div class="blog-content">
+
+                            <small>July 2026</small>
+
+                            <h4>Managing Stress for Better Mental Health</h4>
+
+                            <p>
+
+                                Discover healthy techniques for reducing stress
+                                and improving emotional wellbeing.
+
+                            </p>
+
+                            <a href="#">
+                                Read More →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+</main>
 
     <!-- Newsletter Section -->
     <section class="newsletter py-5">

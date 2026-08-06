@@ -58,18 +58,18 @@
               </li>
 
               <li class="nav-item me-3">
-                <a href="about.html" class="nav-link">About</a>
+                <a href="about.php" class="nav-link">About</a>
               </li>
 
               <li class="nav-item me-3">
-                <a href="Service.html" class="nav-link">Services</a>
+                <a href="service.php" class="nav-link">Services</a>
               </li>
               <li class="nav-item me-3">
-                <a href="Contact.html" class="nav-link">Contact</a>
+                <a href="contact.php" class="nav-link">Contact</a>
               </li>
 
               <li class="nav-item me-3">
-                <a href="Blog.html" class="nav-link">Blog Post</a>
+                <a href="blog.php" class="nav-link">Blog Post</a>
               </li>
               <li class="nav-item me-3">
                 <a href="#FAQs" class="nav-link">FAQs</a>
@@ -83,11 +83,11 @@
 
             <div class="nav-buttons">
               <a
-                href="appointment.html"
+                href="appointment.php"
                 class="btn btn-sm btn-success d-sm-none d-lg-inline"
                 >Book Appointment</a
               >
-              <a href="Map.html" class="btn btn-sm btn-outline-success"
+              <a href="map.php" class="btn btn-sm btn-outline-success"
                 ><i class="bi bi-geo-alt-fill text-success"></i> Visit Us</a
               >
             </div>
@@ -96,31 +96,8 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <marquee class="mb-md-5" behavior="" direction="">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quod
-        labore eveniet expedita hic ratione ipsam perspiciatis unde repudiandae
-        incidunt pariatur, at aliquid numquam a quis accusantium laborum
-        praesentium quas fugit quia corporis vitae harum! Quas, magnam aut
-        repellat eum vero sed aspernatur possimus eaque perspiciatis?
-        Reprehenderit eveniet voluptatem odio optio id excepturi harum nobis
-        similique quibusdam rerum aut nulla minima, atque laborum. Earum ipsa
-        ducimus repellendus quaerat placeat doloribus, minima neque aliquam
-        minus sapiente? Quas facere sunt repudiandae atque vel assumenda rerum
-        necessitatibus ratione in debitis fugiat, tenetur dolorum vitae
-        laudantium officiis commodi pariatur illum corrupti? Quod dolore,
-        quibusdam in tempore odio animi minima. Iusto molestias necessitatibus
-        omnis quidem iste esse, dolore assumenda. Alias recusandae, ut excepturi
-        hic quasi illum perferendis. Ipsam laboriosam, dolore ad cumque
-        blanditiis quia aliquam alias animi, praesentium iste officia quis ab
-        illum accusamus? Animi itaque voluptates neque obcaecati dicta iste sunt
-        ratione, ut laboriosam tempora quod nihil iusto illum placeat in facere
-        dolorem, praesentium voluptatibus et nesciunt saepe nostrum nisi at
-        corporis! Eaque perferendis corporis ad velit laudantium? Hic nulla
-        distinctio amet quia mollitia quasi temporibus. Veniam alias unde sunt
-        debitis perferendis libero minima consequatur ipsa facere quo, non
-        minus. Sequi soluta nemo consequatur?
-      </marquee>
+<section class="hero">
+
       <div class="container-lg p-2">
         <div class="row p- justify-content-center gap-1 align-items-center">
           <div class="col-md-6">
@@ -214,14 +191,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button> -->
+               
               </div>
             </div>
           </div>
@@ -233,7 +203,7 @@
           </button>
         </div>
       </div>
-    </section>
+</section>
 
     <main>
       <section class="mt-5">
@@ -254,14 +224,17 @@
             <div class="mission col-md-5">
               <div class="text-center">
                 <h2 class="text-success">Our Mission</h2>
-              </div>
-              <p class="text-muted">
+
+                <p class="text-muted">
                 To provide compassionate, affordable, and high-quality
                 healthcare that improves the well-being of every patient we
                 serve.
-              </p>
+               </p>
+
+              </div>
+              
               <div class="text-center">
-                <a href="about.html" class="text-muted text-decoration-nones"
+                <a href="about.php" class="text-muted text-decoration-nones"
                   >Read More <i class="bi bi-arrow-right text-muted"></i>
                 </a>
               </div>
@@ -272,14 +245,17 @@
             <div class="vision col-md-5">
               <div class="text-center">
                 <h2 class="text-success">Our Vision</h2>
-              </div>
-              <p class="text-muted">
+
+                <p class="text-muted">
                 To provide compassionate, affordable, and high-quality
                 healthcare that improves the well-being of every patient we
                 serve.
-              </p>
+               </p>
+
+              </div>
+              
               <div class="text-center">
-                <a href="about.html#vision" class="text-muted text-decoration-nones"
+                <a href="about.php#vision" class="text-muted text-decoration-nones"
                   >Read More <i class="bi bi-arrow-right text-muted"></i>
                 </a>
               </div>
@@ -698,44 +674,107 @@
       </section>
     </main>
 
-    <footer class="footer mt-3">
-      <div
-        class="container-lg py-5 d-flex justify-content-center align-items-center"
-      >
-        <div class="row" style="width: 100%">
-          <div class="footer-col col-md-3 col-sm-6">
-            <h4>Sharmrock</h4>
-            <ul>
-              <li><a href="about.html">About US</a></li>
-              <li><a href="service.html">Our Services</a></li>
-              <li><a href="about.html">Our Mission</a></li>
-              <li><a href="#">Blog Post</a></li>
-            </ul>
-          </div>
+  <footer class="footer">
 
-          <div class="footer-col col-md-3 col-sm-6">
-            <h4>Get Help</h4>
-            <ul>
-              <li><a href="#FAQs">FAQs</a></li>
-              <li><a href="appointment.html">Book Appointment</a></li>
-              <li><a href="Map.html">Visit US</a></li>
-              <li><a href="contact.html">Contact US</a></li>
-            </ul>
-          </div>
+<div class="container">
 
-          <div class="footer-col col-md-3 col-sm-6">
-            <h4>Common Services</h4>
-            <ul>
-              <li><a href="service.html">General Consultations</a></li>
-              <li><a href="service.html">Laboratory Services</a></li>
-              <li><a href="service.html">Pharmacy Services</a></li>
-              <li><a href="service.html">Emergency Care</a></li>
-              <li><a href="service.html">Maternity Care</a></li>
-            </ul>
-          </div>
+<div class="row gy-5">
 
-          <div class="footer-col col-md-3 col-sm-6">
-            <h4>Follow US</h4>
+<!-- Logo -->
+
+<div class="col-lg-4 col-md-6">
+
+<h2>
+
+<i class="bi bi-hospital-fill footer-logo"></i>
+
+Shamrock Medical Centre
+
+</h2>
+
+<p>
+
+Providing quality healthcare through compassionate professionals,
+modern equipment and patient-centered services.
+
+</p>
+
+</div>
+
+<!-- Links -->
+
+<div class="col-lg-2 col-md-6">
+
+<h4>Quick Links</h4>
+
+<ul>
+
+<li><a href="index.php">Home</a></li>
+
+<li><a href="about.php">About</a></li>
+
+<li><a href="service.php">Services</a></li>
+
+<li><a href="appointment.php">Appointment</a></li>
+
+<li><a href="contact.php">Contact</a></li>
+
+</ul>
+
+</div>
+
+<!-- Services -->
+
+<div class="col-lg-3 col-md-6">
+
+<h4>Our Services</h4>
+
+<ul>
+
+<li><a href="#">General Consultation</a></li>
+
+<li><a href="#">Laboratory Services</a></li>
+
+<li><a href="#">Pharmacy</a></li>
+
+<li><a href="#">Emergency Care</a></li>
+
+<li><a href="#">Maternity Care</a></li>
+
+</ul>
+
+</div>
+
+<!-- Contact -->
+
+<div class="col-lg-3 col-md-6 footer-contact">
+
+<h4>Contact Us</h4>
+
+<p>
+
+<i class="bi bi-telephone-fill"></i>
+
++234 903 189 1178
+
+</p>
+
+<p>
+
+<i class="bi bi-envelope-fill"></i>
+
+info@shamrockmedical.com
+
+</p>
+
+<p>
+
+<i class="bi bi-geo-alt-fill"></i>
+
+Olorunda Road, Elepe, Ibadan
+
+</p>
+
             <div class="social-links">
               <a
                 href="https://web.facebook.com/laura.crespo.980967"
@@ -746,10 +785,38 @@
               <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div class="container">
+
+<p>
+
+© <?php echo date("Y"); ?>
+
+Shamrock Medical Centre. All Rights Reserved.
+
+</p>
+
+<p>
+
+Designed & Developed by
+
+<span>Temitayo Akindulu</span>
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
 
     <!-- BOOTSTRAP JAVASCRIPT BUNDLE -->
 

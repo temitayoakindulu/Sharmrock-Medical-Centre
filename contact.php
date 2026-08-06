@@ -55,15 +55,15 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item me-3">
-                <a href="index.html" class="nav-link" id="home">Home</a>
+                <a href="index.php" class="nav-link" id="home">Home</a>
               </li>
 
               <li class="nav-item me-3">
-                <a href="about.html" class="nav-link" id="about">About</a>
+                <a href="about.php" class="nav-link" id="about">About</a>
               </li>
 
               <li class="nav-item me-3">
-                <a href="service.html" class="nav-link" id="services"
+                <a href="service.php" class="nav-link" id="services"
                   >Services</a
                 >
               </li>
@@ -72,7 +72,7 @@
               </li>
 
               <li class="nav-item me-3">
-                <a href="blog.html" class="nav-link" id="contact">Blog Post</a>
+                <a href="blog.php" class="nav-link" id="contact">Blog Post</a>
               </li>
 
               <!-- <li class="nav-item">
@@ -82,10 +82,10 @@
             </ul>
 
             <div class="nav-buttons">
-              <a href="appointment.html" class="btn btn-sm btn-success d-sm-none d-lg-inline"
+              <a href="appointment.php" class="btn btn-sm btn-success d-sm-none d-lg-inline"
                 >Book Appointment</a
               >
-              <a href="Map.html" class="btn btn-sm btn-outline-success"
+              <a href="map.php" class="btn btn-sm btn-outline-success"
                 ><i class="bi bi-geo-alt-fill text-success"></i> Visit Us</a
               >
             </div>
@@ -98,49 +98,81 @@
       <div class="container" style="margin-top: 30px">
         <div class="row justify-content-between">
           <div class="col-md-8 p-5">
-            <form action="" class="row g-3">
-              <h3 class="text-center">Send Us A Message</h3>
-              <div class="col-md-6">
-                <label for="firstName" class="form-label">First Name</label>
-                <input type="text" class="form-control" />
-              </div>
-              <div class="col-md-6">
-                <label for="lastName" class="form-label">Last Name</label>
-                <input type="text" class="form-control" />
-              </div>
-              <div class="col-md-8">
-                <label for="enailInfo" class="form-label">E-mail</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="emailInfo"
-                  required
-                />
-              </div>
-              <div class="col-md-4">
-                <label for="phoneNumber" class="form-label">Phone Number</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="phoneNumber"
-                  placeholder="+234 903 1891 178"
-                />
-              </div>
-              <div class="col-md-12">
-                <label for="message" class="form-label">Your Message</label>
-                <textarea
-                  name="text"
-                  id="message"
-                  rows="3"
-                  class="form-control" required
-                ></textarea>
-              </div>
-              <div class="col-md-12">
-                <button type="submit" class="btn btn-success">
-                  Send Message
-                </button>
-              </div>
-            </form>
+
+
+<?php if(isset($_GET['success'])) { ?>
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+
+    <strong>Success!</strong> Your message has been sent successfully. We will get back to you shortly.
+
+    <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert">
+    </button>
+
+</div>
+
+<?php } ?>
+
+            <form action="process/contact_process.php" method="POST" class="row g-3">
+
+    <h3 class="text-center">Send Us A Message</h3>
+
+    <div class="col-md-6">
+        <label class="form-label">First Name</label>
+        <input
+            type="text"
+            class="form-control"
+            name="first_name"
+            required>
+    </div>
+
+    <div class="col-md-6">
+        <label class="form-label">Last Name</label>
+        <input
+            type="text"
+            class="form-control"
+            name="last_name"
+            required>
+    </div>
+
+    <div class="col-md-8">
+        <label class="form-label">E-mail</label>
+        <input
+            type="email"
+            class="form-control"
+            name="email"
+            required>
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Phone Number</label>
+        <input
+            type="text"
+            class="form-control"
+            name="phone"
+            placeholder="+234 903 1891 178"
+            required>
+    </div>
+
+    <div class="col-md-12">
+        <label class="form-label">Your Message</label>
+        <textarea
+            class="form-control"
+            rows="4"
+            name="message"
+            required></textarea>
+    </div>
+
+    <div class="col-md-12">
+        <button type="submit" class="btn btn-success">
+            Send Message
+        </button>
+    </div>
+
+</form>
           </div>
 
           <div class="col-md-4 p-5">
@@ -185,54 +217,149 @@
       </div>
     </section>
 
-    <footer class="footer mt-3">
-      <div
-        class="container-lg py-5 d-flex justify-content-center align-items-center"
-      >
-        <div class="row" style="width: 100%">
-          <div class="footer-col col-md-3 col-sm-6">
-            <h4>Sharmrock</h4>
-            <ul>
-              <li><a href="about.html">About US</a></li>
-              <li><a href="service.html">Our Services</a></li>
-              <li><a href="about.html">Our Mission</a></li>
-              <li><a href="#">Blog Post</a></li>
-            </ul>
-          </div>
+    <footer class="footer">
 
-          <div class="footer-col col-md-3 col-sm-6">
-            <h4>Get Help</h4>
-            <ul>
-              <li><a href="#FAQs">FAQs</a></li>
-              <li><a href="appointment.html">Book Appointment</a></li>
-              <li><a href="Map.html">Visit US</a></li>
-              <li><a href="contact.html">Contact US</a></li>
-            </ul>
-          </div>
+<div class="container">
 
-          <div class="footer-col col-md-3 col-sm-6">
-            <h4>Common Services</h4>
-            <ul>
-              <li><a href="service.html">General Consultations</a></li>
-              <li><a href="service.html">Laboratory Services</a></li>
-              <li><a href="service.html">Pharmacy Services</a></li>
-              <li><a href="service.html">Emergency Care</a></li>
-              <li><a href="service.html">Maternity Care</a></li>
-            </ul>
-          </div>
+<div class="row gy-5">
 
-          <div class="footer-col col-md-3 col-sm-6">
-            <h4>Follow US</h4>
+<!-- Logo -->
+
+<div class="col-lg-4 col-md-6">
+
+<h2>
+
+<i class="bi bi-hospital-fill footer-logo"></i>
+
+Shamrock Medical Centre
+
+</h2>
+
+<p>
+
+Providing quality healthcare through compassionate professionals,
+modern equipment and patient-centered services.
+
+</p>
+
+</div>
+
+<!-- Links -->
+
+<div class="col-lg-2 col-md-6">
+
+<h4>Quick Links</h4>
+
+<ul>
+
+<li><a href="index.php">Home</a></li>
+
+<li><a href="about.php">About</a></li>
+
+<li><a href="service.php">Services</a></li>
+
+<li><a href="appointment.php">Appointment</a></li>
+
+<li><a href="contact.php">Contact</a></li>
+
+</ul>
+
+</div>
+
+<!-- Services -->
+
+<div class="col-lg-3 col-md-6">
+
+<h4>Our Services</h4>
+
+<ul>
+
+<li><a href="#">General Consultation</a></li>
+
+<li><a href="#">Laboratory Services</a></li>
+
+<li><a href="#">Pharmacy</a></li>
+
+<li><a href="#">Emergency Care</a></li>
+
+<li><a href="#">Maternity Care</a></li>
+
+</ul>
+
+</div>
+
+<!-- Contact -->
+
+<div class="col-lg-3 col-md-6 footer-contact">
+
+<h4>Contact Us</h4>
+
+<p>
+
+<i class="bi bi-telephone-fill"></i>
+
++234 903 189 1178
+
+</p>
+
+<p>
+
+<i class="bi bi-envelope-fill"></i>
+
+info@shamrockmedical.com
+
+</p>
+
+<p>
+
+<i class="bi bi-geo-alt-fill"></i>
+
+Olorunda Road, Elepe, Ibadan
+
+</p>
+
             <div class="social-links">
-              <a href="https://web.facebook.com/laura.crespo.980967" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a
+                href="https://web.facebook.com/laura.crespo.980967"
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div class="container">
+
+<p>
+
+© <?php echo date("Y"); ?>
+
+Shamrock Medical Centre. All Rights Reserved.
+
+</p>
+
+<p>
+
+Designed & Developed by
+
+<span>Temitayo Akindulu</span>
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
     <!-- BOOTSTRAP JAVASCRIPT BUNDLE -->
 
     <script
