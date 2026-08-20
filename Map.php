@@ -22,6 +22,8 @@
     />
 
     <link rel="stylesheet" href="./CSS/index.css" />
+
+    <link rel="icon" type="image/png" href="Images/SMC-favicon.png">
     <title>Map</title>
   </head>
   <body>

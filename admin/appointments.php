@@ -36,7 +36,7 @@ $result = $conn->query($sql);
 
 <div class="container mt-5">
 
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3">
 
     <div>
 
@@ -74,7 +74,7 @@ $result = $conn->query($sql);
 
             
 
-                <table class="table table-hover table-striped align-middle">
+                <table class="table table-hover table-striped table-bordered align-middle text-nowrap">
 
                     <thead class="table-success">
 
@@ -121,24 +121,28 @@ while ($row = $result->fetch_assoc()) {
 
     <td>
 
-        <a href="view.php?id=<?php echo $row["id"]; ?>"
-            class="btn btn-outline-primary btn-sm">
+       <div class="d-flex gap-2">
 
-            <i class="bi bi-eye"></i>
+    <a href="view.php?id=<?php echo $row["id"]; ?>"
+        class="btn btn-outline-primary btn-sm"
+        title="View">
 
-            View
+        <i class="bi bi-eye"></i>
 
-        </a>
+    </a>
 
-        <a href="delete.php?id=<?php echo $row["id"]; ?>"
-   class="btn btn-outline-danger btn-sm"
-   onclick="return confirm('Are you sure you want to delete this appointment?');">
+    <a href="delete.php?id=<?php echo $row["id"]; ?>"
+        class="btn btn-outline-danger btn-sm"
+        title="Delete"
+        onclick="return confirm('Are you sure you want to delete this appointment?');">
 
-    <i class="bi bi-trash"></i>
+        <i class="bi bi-trash"></i>
 
-    Delete
+    </a>
 
-</a>
+</div>
+
+      
 
     </td>
 

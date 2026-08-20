@@ -23,6 +23,8 @@
 
     <link rel="stylesheet" href="./CSS/index.css" />
     <link rel="stylesheet" href="./CSS/blog.css" />
+
+    <link rel="icon" type="image/png" href="Images/SMC-favicon.png">
     <title>Blog Posts</title>
   </head>
   <body>
@@ -73,7 +75,7 @@
               </li>
 
               <li class="nav-item me-3">
-                <a href="blog.php" class="nav-link" id="contact">Blog Post</a>
+                <a href="blog.php" class="nav-link active-page" id="contact">Blog Post</a>
               </li>
 
               <!-- <li class="nav-item">

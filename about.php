@@ -22,6 +22,7 @@
     />
 
     <link rel="stylesheet" href="./CSS/index.css" />
+    <link rel="icon" type="image/png" href="Images/SMC-favicon.png">
     <title>About Sharmrock</title>
   </head>
   <body>
@@ -59,7 +60,7 @@
               </li>
 
               <li class="nav-item me-3">
-                <a href="#" class="nav-link" id="about">About</a>
+                <a href="#" class="nav-link active-page" id="about">About</a>
               </li>
 
               <li class="nav-item me-3">

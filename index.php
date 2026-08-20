@@ -21,6 +21,8 @@
     />
 
     <link rel="stylesheet" href="./CSS/index.css" />
+    
+    <link rel="icon" type="image/png" href="Images/SMC-favicon.png">
     <title>Home</title>
   </head>
   <body>
@@ -54,7 +56,7 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item me-3">
-                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link active-page" >Home</a>
               </li>
 
               <li class="nav-item me-3">

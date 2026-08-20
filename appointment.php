@@ -27,6 +27,7 @@ session_start();
     <link rel="stylesheet" href="./CSS/appointment.css" />
     <link rel="stylesheet" href="./CSS/index.css" />
     
+    <link rel="icon" type="image/png" href="Images/SMC-favicon.png">
     <title>Book Appointment</title>
 
   </head>

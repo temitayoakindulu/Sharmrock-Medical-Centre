@@ -22,6 +22,8 @@
     />
 
     <link rel="stylesheet" href="./CSS/index.css" />
+
+    <link rel="icon" type="image/png" href="Images/SMC-favicon.png">
     <title>Sharmrock Service</title>
   </head>
   <body>
@@ -63,7 +65,7 @@
               </li>
 
               <li class="nav-item me-3">
-                <a href="#" class="nav-link" id="services">Services</a>
+                <a href="#" class="nav-link active-page" id="services">Services</a>
               </li>
               <li class="nav-item me-3">
                 <a href="contact.php" class="nav-link" id="contact">Contact</a>
@@ -257,7 +259,7 @@
               />
             </div>
 
-            <div class="col-md-7 mt-4">
+            <!-- <div class="col-md-7 mt-4">
               <div class="row justify-content-center">
                 <h1 class="text-center fw-bold">Why Patients Choose Us</h1>
 
@@ -306,10 +308,176 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
+
           </div>
         </div>
       </section>
+
+
+
+      <!--=================================
+        WHY CHOOSE US
+==================================-->
+
+<section class="why-us py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-subtitle">
+                WHY CHOOSE US
+            </span>
+
+            <h2 class="section-title mt-3">
+                Trusted Healthcare You Can Count On
+            </h2>
+
+            <p class="why-intro">
+                At Sharmrock Medical Health Centre, we combine medical
+                expertise, modern technology, and compassionate care to
+                provide every patient with an exceptional healthcare experience.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+                        <i class="bi bi-heart-pulse-fill"></i>
+                    </div>
+
+                    <h4>Experienced Professionals</h4>
+
+                    <p>
+                        Our qualified doctors, nurses, and specialists work
+                        together to provide safe, reliable, and patient-focused
+                        medical care.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+                        <i class="bi bi-hospital-fill"></i>
+                    </div>
+
+                    <h4>Modern Medical Facilities</h4>
+
+                    <p>
+                        We provide quality healthcare using modern equipment,
+                        comfortable facilities, and efficient clinical practices.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h4>Quality & Safety</h4>
+
+                    <p>
+                        Patient safety and quality service remain our highest
+                        priorities in every consultation and treatment.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card 4 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+                        <i class="bi bi-emoji-smile-fill"></i>
+                    </div>
+
+                    <h4>Patient-Centred Care</h4>
+
+                    <p>
+                        Every patient is treated with dignity, compassion,
+                        respect, and personalized attention throughout their
+                        healthcare journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card 5 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+
+                    <h4>Timely Medical Services</h4>
+
+                    <p>
+                        We strive to reduce waiting times while ensuring
+                        efficient diagnosis and quality healthcare delivery.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card 6 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
+                    <h4>Community Commitment</h4>
+
+                    <p>
+                        We are committed to promoting healthier communities
+                        through accessible healthcare and continuous health
+                        education.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
     </main>
 
     <!-- Newsletter Section -->

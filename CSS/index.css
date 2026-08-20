@@ -39,6 +39,14 @@ body {
   clear: both;
 }
 
+.nav-link.active-page{
+    color: #1b5e20 !important;
+    font-weight: 700;
+    border-bottom: 3px solid #1b5e20;
+    background-color: #e3f3e4;
+    border-radius: 5px;
+}
+
 /* COLORS */
 
 :root {
